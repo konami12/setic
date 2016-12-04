@@ -1,0 +1,36 @@
+<!-- BEGIN : overlay -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <!-- BEGIN : modal-dialog -->    
+    <div class="modal-dialog " role="document">
+        <!-- BEGIN : modal-dialog -->
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal" ng-click="reset(frmUSer)">
+                    <span class="glyphicon glyphicon-remove-sign" style="color: white"></span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    <span class="glyphicon glyphicon-user"></span>
+                    Datos de empleado
+                </h4>
+            </div>
+             <!-- BEGIN : formulario -->
+            <form id="frmUser" name="frmUser" novalidate="">
+                <!-- BEGIN : modal-body -->
+                <div class="modal-body">
+                    
+                </div>
+                <!-- END   : modal-body -->
+                <!-- BEGIN : Botonera -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger glyphicon glyphicon-remove-sign" data-dismiss="modal" title="Cerrar" ng-click="reset(frmUSer)"></button>
+                    <button type="button" class="btn btn-success glyphicon glyphicon-floppy-saved" title="Registrar usuario" ng-click="validForm(frmUser)"></button>
+                </div>
+                <!-- END   : Botonera -->
+            </form>
+            <!-- END   : formulario -->
+        </div>
+        <!-- END   : modal-dialog -->
+    </div>
+    <!-- END   : modal-dialog -->    
+</div>
+<!-- END   : overlay -->

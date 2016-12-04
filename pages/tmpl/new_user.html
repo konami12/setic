@@ -1,0 +1,329 @@
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li ng-click="loadTmp('dash' , 1)">
+			<i class="fa fa-home"></i>
+			<a>Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<i class="fa fa-pencil"></i>
+			<a>Agregar nuevo usuario</a>
+		</li>
+	</ul>
+</div>
+<h3 class="page-title">
+	Agregar <small>Nuevo usuario</small>
+</h3>
+
+<div class="row" ng-controller="userController">
+
+	<div ng-include="'./tmpl/user/user-confir.html'"></div>
+	<div class="col-md-12">
+		<div class="portlet box blue">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="fa fa-user"></i>
+					{{action}} - 
+					<span class="step-title"> No {{entity.num}} <span>
+				</div>
+			</div>
+			<div class="portlet-body form">
+				<form class="form-horizontal" role="form" id="frmUser" name="frmUser" novalidate="">
+					<div class="form-body">
+						<div class="row">
+							<div class="col-md-12">
+								<h3><i class="glyphicon glyphicon-pencil"></i> <strong> Datos personales </strong></h3>
+								<hr>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="col-md-12" style="text-align: center">
+										<span class="thubmnail">
+											<img src="../img/{{entity.foto}}" style="width: 80%;background-color: darkturquoise" class="img-circle">
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-8">
+								<div class="form-group form-md-line-input">
+									<div class="col-md-12">
+										<input type="text" ng-model="entity.name" name="name" class="form-control" id="form_control_1" required="" placeholder="Nombre completo">
+										<div class="form-control-focus">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="col-md-12">
+										<input type="number" ng-model="entity.edad" name="edad" class="form-control" id="form_control_1" required="" placeholder="Edad">
+										<div class="form-control-focus">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<select name="sexo" ng-model="entity.sexo" class="form-control" required="">
+											<option value="">- Sexo </option>
+											<option value="M">Masculino</option>
+											<option value="F">Femenino</option>
+										</select>
+										<div class="form-control-focus">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<input class="form-control" type="tel" name="tel" ng-model="entity.tel" required="" placeholder="Numero telefonico">
+										<div class="form-control-focus">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<input class="form-control" type="tel" name="cel" ng-model="entity.cel" required="" placeholder="Celular">
+										<div class="form-control-focus">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="col-md-12">
+										<select name= "estudio" ng-model="entity.estudio" class="form-control" required="" >
+											<option value="">- Escolaridad</option>
+											<option value="Universidad">Universidad</option>
+											<option value="Preparatoria">Preparatoria</option>
+											<option value="Secundaria">Secundaria</option>
+											<option value="Primaria">Primaria</option>
+										</select>
+										<div class="form-control-focus">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="col-md-12">
+										<input class="form-control" type="email" name="email" ng-model="entity.email" required="" placeholder="Correo electronico">
+										<div class="form-control-focus">
+										</div>
+									</div>
+								</div>	
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<input type="text" name="emergencian" ng-model="entity.emergencia.n" required="" placeholder="Contacto de emergencia" class="form-control">
+										<div class="form-control-focus"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<input type="tel" name="emergenciat" ng-model="entity.emergencia.t" required="" placeholder="Telefono de contacto" class="form-control">
+										<div class="form-control-focus"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<h3><i class="glyphicon glyphicon-road"></i> <strong> Dirección </strong></h3>
+								<hr>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<input type="text" required="" class="form-control" placeholder="Colonia" name="addr-col" ng-model="entity.addr.col">
+										<div class="form-control-focus"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<input type="text" required="" class="form-control" placeholder="Calle" name="addr-calle" ng-model="entity.addr.calle">
+										<div class="form-control-focus"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<input type="number" required="" class="form-control" placeholder="Número" name="addr-num" ng-model="entity.addr.num">
+										<div class="form-control-focus"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<input type="number" required="" class="form-control" placeholder="Codigo Postal" name="addr-cp" ng-model="entity.addr.cp">
+										<div class="form-control-focus"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<input type="text" required="" class="form-control" placeholder="Mucnicipio" name="addr-mun" ng-model="entity.addr.mun">
+										<div class="form-control-focus"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<select name="addr-estado" ng-model="entity.addr.estado" required="" class="form-control">
+											<option value="">- Seleccione el estado</option>
+											<option value="Aguascalientes">Aguascalientes</option>
+											<option value="Baja California">Baja California</option>
+											<option value="Baja California Sur">Baja California Sur</option>
+											<option value="Campeche">Campeche</option>
+											<option value="Chiapas">Chiapas</option>
+											<option value="Chihuahua">Chihuahua</option>
+											<option value="Coahuila">Coahuila</option>
+											<option value="Colima">Colima</option>
+											<option value="Distrito Federal">Distrito Federal</option>
+											<option value="Durango">Durango</option>
+											<option value="Estado de México">Estado de México</option>
+											<option value="Guanajuato">Guanajuato</option>
+											<option value="Guerrero">Guerrero</option>
+											<option value="Hidalgo">Hidalgo</option>
+											<option value="Jalisco">Jalisco</option>
+											<option value="Michoacán">Michoacán</option>
+											<option value="Morelos">Morelos</option>
+											<option value="Nayarit">Nayarit</option>
+											<option value="Nuevo León">Nuevo León</option>
+											<option value="Oaxaca">Oaxaca</option>
+											<option value="Puebla">Puebla</option>
+											<option value="Querétaro">Querétaro</option>
+											<option value="Quintana Roo">Quintana Roo</option>
+											<option value="San Luis Potosí">San Luis Potosí</option>
+											<option value="Sinaloa">Sinaloa</option>
+											<option value="Sonora">Sonora</option>
+											<option value="Tabasco">Tabasco</option>
+											<option value="Tamaulipas">Tamaulipas</option>
+											<option value="Tlaxcala">Tlaxcala</option>
+											<option value="Veracruz">Veracruz</option>
+											<option value="Yucatán">Yucatán</option>
+											<option value="Zacatecas">Zacatecas</option>
+										</select>
+										<div class="form-control-focus"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<h3><i class="glyphicon glyphicon-list-alt"></i> <strong> Datos para la empresas </strong></h3>
+								<hr>
+							</div>
+							
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+									<select name="grupo" ng-model="entity.grupo" required="" class="form-control">
+										<option value="">- Indique el grupo</option>
+										<option value="Adminstrativo">Adminstrativo</option>
+										<option value="Operaciones">Operaciones</option>
+									</select>
+										<div class="form-control-focus"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<select name="depto" ng-model="entity.depto" name="depto" required="" class="form-control">
+											<option value="">- Indique el departamento</option>
+											<option value="Departamento 1">Departamento 1</option>
+											<option value="Departamento 2">Departamento 2</option>
+											<option value="Departamento 3">Departamento 3</option>
+											<option value="Departamento 4">Departamento 4</option>
+											<option value="Departamento 5">Departamento 5</option>
+										</select>
+										<div class="form-control-focus"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<select name="turno" ng-model="entity.turno" required="" class="form-control">
+											<option value="">- Indique el turno</option>
+											<option value="Matutino">Matutino</option>
+											<option value="Vespertino">Vespertino</option>
+										</select>
+										<div class="form-control-focus"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<select name="puesto" id="" ng-model="entity.puesto" required="" class="form-control">
+											<option value="">- Seleccione el puesto</option>
+											<option value="Vigilante">Vigilante</option>
+											<option value="Programador">Programador</option>
+											<option value="Contador">Contador</option>
+											<option value="Obrero">Obrero</option>
+											<option value="Recursos Humanos">Recursos Humanos</option>
+											<option value="Intendente">Intendente</option>
+											<option value="Soporte Tecnico">Soporte Tecnico</option>
+											<option value="Velador">Velador</option>
+										</select>
+										<div class="form-control-focus"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<input type="text" name="salario" ng-model="entity.salario" required="" class="form-control" placeholder="Salario mensual">
+										<div class="form-control-focus"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+										<select name="pagadora" id="" ng-model="entity.pagadora" required="" class="form-control">
+											<option value="">- Seleccione pagadora</option>
+											<option value="empresa1">empresa1</option>
+											<option value="empresa2">empresa2</option>
+											<option value="empresa3">empresa3</option>
+											<option value="empresa4">empresa4</option>
+											<option value="empresa5">empresa5</option>
+										</select>
+										<div class="form-control-focus"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-actions noborder">
+						<div class="alert alert-danger" id="error" style="display: none">
+						    <strong>
+						      <i class="glyphicon glyphicon-remove-circle"></i> 
+						      Faltan campos por llenar, oh algunos campos no cuentan con el formato correcto...
+						    </strong>
+						</div>
+						<div class="alert alert-success" id="ok" style="display: none">
+						    <strong>
+						      <i class="glyphicon glyphicon-ok-circle"></i> 
+						      El registro se grabo satisfactoriamente.
+						    </strong>
+						</div>
+						<button type="button" title="Grabar" class="btn btn-success " ng-click="validForm(frmUser)"><i class="glyphicon glyphicon-floppy-saved"></i> Grabar</button>
+						<button type="button" title="Reset" class="btn btn-danger" ng-click="resetForm(frmUser)"><i class="glyphicon glyphicon-remove-sign"></i> Cancel</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>	
+</div>

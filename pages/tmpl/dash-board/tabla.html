@@ -1,0 +1,90 @@
+					<div class="col-md-12" ng-init="search = 'jorge'">
+						<div class="portlet box blue">
+							<div class="portlet-title">
+								<div class="caption">
+									<i class="fa fa-user"></i>Lista de Empleados
+								</div>
+								<div class="tools">
+								</div>
+							</div>
+							<div class="portlet-body flip-scroll">
+								<div class="input-group" style="width:100%">
+									<input type="text" id="search" class="form-control" placeholder="Search..." ng-keyup="$parent.searchUser()">
+								</div>
+								<br>
+
+								<div class="row">
+								    <div class="col-md-12" style="display: none" id="error">
+								        <div class="alert alert-danger">
+								            <strong>
+								              <i class="glyphicon glyphicon-remove-circle"></i>  {{$parent.msg}}
+								            </strong>
+								        </div>
+								    </div>
+								
+								    <div class="col-md-12" style="display: none" id="success">
+								        <div class="alert alert-success">
+								            <strong>
+								              <i class="glyphicon glyphicon-ok-circle"></i>  {{$parent.action}}
+								            </strong>
+								        </div>
+								    </div>
+								</div>
+
+								<table class="table table-bordered table-striped table-condensed flip-content">
+									<thead class="flip-content">
+										<tr class="heading">
+											<th width="numeric">
+												 ID
+											</th>
+											<th>
+												 Nombre
+											</th>
+											<th class="numeric">
+												 Puesto
+											</th>
+											<th class="numeric">
+												 Turno
+											</th>
+											<th class="numeric">
+												 Depto.
+											</th>
+											<th class="numeric">
+												 Grupo
+											</th>
+											<th class="numeric">
+												 Sueldo
+											</th>
+											<th class="numeric">
+												Action
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="empleado in empleados">
+											<td class="numeric">{{empleado.num}}</td>
+											<td class="numeric">{{empleado.name | uppercase }} </td>
+											<td class="numeric">{{empleado.puesto}}</td>
+											<td class="numeric">{{empleado.turno}}</td>
+											<td class="numeric">{{empleado.depto}}</td>
+											<td class="numeric">{{empleado.grupo}}</td>
+											<td class="numeric">$ {{empleado.salario}}</td>
+											<td class="numeric" style="text-align: center">
+												<span  class="btn btn-xs red" ng-click="$parent.question(empleado)" data-toggle="modal" data-target=".bs-example-modal-sm">
+													<i class="fa fa-remove"></i> Borrar
+												</span>
+												<span class="btn btn-xs green" ng-click="$parent.editar(empleado)">
+													<i class="fa fa-edit"></i> Editar
+												</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+
+<script type="text/javascript">
+	jQuery('#search').validField(onlyText + ' ');
+</script>

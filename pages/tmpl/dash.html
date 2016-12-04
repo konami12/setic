@@ -1,0 +1,15 @@
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li ng-click="$parent.loadTmp('dash' , 1)">
+			<i class="fa fa-home"></i>
+			<a>Home</a>
+		</li>
+	</ul>
+</div>
+<h3 class="page-title">
+Dashboard <small>reports & statistics</small>
+</h3>
+
+<div class="row" ng-include="'./tmpl/dash-board/estadistica.html'"></div>
+
+<div class="row" ng-include="'./tmpl/dash-board/tabla.html'"></div>
