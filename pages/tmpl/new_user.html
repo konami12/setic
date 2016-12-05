@@ -46,18 +46,11 @@
 							</div>
 							<div class="col-md-8">
 								<div class="form-group form-md-line-input">
-									<div class="col-md-12">
+									<div class="space col-md-12">
+									<div class="input-icon">
 										<input type="text" ng-model="entity.name" name="name" class="form-control" id="form_control_1" required="" placeholder="Nombre completo">
-										<div class="form-control-focus">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="form-group form-md-line-input">
-									<div class="col-md-12">
-										<input type="number" ng-model="entity.edad" name="edad" class="form-control" id="form_control_1" required="" placeholder="Edad">
-										<div class="form-control-focus">
+										<div class="form-control-focus"></div>
+										<i class="fa"></i>
 										</div>
 									</div>
 								</div>
@@ -65,12 +58,25 @@
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
+										<input type="number" ng-model="entity.edad" name="edad" class="form-control" id="form_control_1" required="" placeholder="Edad">
+										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+									<div class="input-icon">
 										<select name="sexo" ng-model="entity.sexo" class="form-control" required="">
 											<option value="">- Sexo </option>
 											<option value="M">Masculino</option>
 											<option value="F">Femenino</option>
 										</select>
-										<div class="form-control-focus">
+										<div class="form-control-focus"></div>
+										<i class="fa"></i>
 										</div>
 									</div>
 								</div>
@@ -78,8 +84,10 @@
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
 										<input class="form-control" type="tel" name="tel" ng-model="entity.tel" required="" placeholder="Numero telefonico">
-										<div class="form-control-focus">
+										<div class="form-control-focus"></div>
+										<i class="fa" id="i0"></i>
 										</div>
 									</div>
 								</div>
@@ -87,15 +95,18 @@
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
 										<input class="form-control" type="tel" name="cel" ng-model="entity.cel" required="" placeholder="Celular">
-										<div class="form-control-focus">
+										<div class="form-control-focus"></div>
+										<i class="fa" id="i1"></i>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
-									<div class="col-md-12">
+									<div class="space col-md-12">
+									<div class="input-icon">
 										<select name= "estudio" ng-model="entity.estudio" class="form-control" required="" >
 											<option value="">- Escolaridad</option>
 											<option value="Universidad">Universidad</option>
@@ -103,16 +114,19 @@
 											<option value="Secundaria">Secundaria</option>
 											<option value="Primaria">Primaria</option>
 										</select>
-										<div class="form-control-focus">
+										<div class="form-control-focus"></div>
+										<i class="fa"></i>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
-									<div class="col-md-12">
+									<div class="space col-md-12">
+									<div class="input-icon">
 										<input class="form-control" type="email" name="email" ng-model="entity.email" required="" placeholder="Correo electronico">
-										<div class="form-control-focus">
+										<div class="form-control-focus"></div>
+										<i class="fa" id="i2"></i>
 										</div>
 									</div>
 								</div>	
@@ -120,66 +134,134 @@
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
 										<input type="text" name="emergencian" ng-model="entity.emergencia.n" required="" placeholder="Contacto de emergencia" class="form-control">
 										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
 										<input type="tel" name="emergenciat" ng-model="entity.emergencia.t" required="" placeholder="Telefono de contacto" class="form-control">
 										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
 									</div>
 								</div>
 							</div>
+
 							<div class="col-md-12">
-								<h3><i class="glyphicon glyphicon-road"></i> <strong> Dirección </strong></h3>
+								<h3><i class="glyphicon glyphicon-usd"></i> <strong> Datos Bancarios</strong></h3>
 								<hr>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
+										<select class="form-control" ng-model="entity.banco" name="banco" required="">
+											<option value="">- Selccione el banco</option>
+											<option value="Banco 1">Banco 1</option>
+											<option value="Banco 2">Banco 2</option>
+											<option value="Banco 3">Banco 3</option>
+											<option value="Banco 4">Banco 4</option>	
+										</select>
+										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+									<div class="input-icon">
+										<input type="text" required="" class="form-control" placeholder="Clave interbancaria" name="clave" ng-model="entity.clave">
+										<div class="form-control-focus"></div>
+										<i class="fa" id="i3"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+									<div class="input-icon">
+										<input type="text" required="" class="form-control" placeholder="Cuenta bancaria" name="bcuenta" ng-model="entity.bcuenta">
+										<div class="form-control-focus"></div>
+										<i class="fa" id="i4"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<h3><i class="glyphicon glyphicon-home"></i> <strong> Dirección </strong></h3>
+								<hr>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-md-line-input">
+									<div class="space col-md-12">
+									<div class="input-icon">
 										<input type="text" required="" class="form-control" placeholder="Colonia" name="addr-col" ng-model="entity.addr.col">
 										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
 										<input type="text" required="" class="form-control" placeholder="Calle" name="addr-calle" ng-model="entity.addr.calle">
 										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
 										<input type="number" required="" class="form-control" placeholder="Número" name="addr-num" ng-model="entity.addr.num">
 										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
 									</div>
 								</div>
 							</div>
+
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
 										<input type="number" required="" class="form-control" placeholder="Codigo Postal" name="addr-cp" ng-model="entity.addr.cp">
 										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
 										<input type="text" required="" class="form-control" placeholder="Mucnicipio" name="addr-mun" ng-model="entity.addr.mun">
 										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
 										<select name="addr-estado" ng-model="entity.addr.estado" required="" class="form-control">
 											<option value="">- Seleccione el estado</option>
 											<option value="Aguascalientes">Aguascalientes</option>
@@ -216,6 +298,8 @@
 											<option value="Zacatecas">Zacatecas</option>
 										</select>
 										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -227,18 +311,22 @@
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
 									<select name="grupo" ng-model="entity.grupo" required="" class="form-control">
 										<option value="">- Indique el grupo</option>
 										<option value="Adminstrativo">Adminstrativo</option>
 										<option value="Operaciones">Operaciones</option>
 									</select>
 										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
 										<select name="depto" ng-model="entity.depto" name="depto" required="" class="form-control">
 											<option value="">- Indique el departamento</option>
 											<option value="Departamento 1">Departamento 1</option>
@@ -248,24 +336,30 @@
 											<option value="Departamento 5">Departamento 5</option>
 										</select>
 										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
 										<select name="turno" ng-model="entity.turno" required="" class="form-control">
 											<option value="">- Indique el turno</option>
 											<option value="Matutino">Matutino</option>
 											<option value="Vespertino">Vespertino</option>
 										</select>
 										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
 										<select name="puesto" id="" ng-model="entity.puesto" required="" class="form-control">
 											<option value="">- Seleccione el puesto</option>
 											<option value="Vigilante">Vigilante</option>
@@ -278,20 +372,26 @@
 											<option value="Velador">Velador</option>
 										</select>
 										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
 										<input type="text" name="salario" ng-model="entity.salario" required="" class="form-control" placeholder="Salario mensual">
 										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group form-md-line-input">
 									<div class="space col-md-12">
+									<div class="input-icon">
 										<select name="pagadora" id="" ng-model="entity.pagadora" required="" class="form-control">
 											<option value="">- Seleccione pagadora</option>
 											<option value="empresa1">empresa1</option>
@@ -301,6 +401,8 @@
 											<option value="empresa5">empresa5</option>
 										</select>
 										<div class="form-control-focus"></div>
+										<i class="fa"></i>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -311,6 +413,12 @@
 						    <strong>
 						      <i class="glyphicon glyphicon-remove-circle"></i> 
 						      Faltan campos por llenar, oh algunos campos no cuentan con el formato correcto...
+						    </strong>
+						</div>
+						<div class="alert alert-danger" id="error2" style="display: none">
+						    <strong>
+						      <i class="glyphicon glyphicon-remove-circle"></i> 
+						     	Los siguientes datos ya existen "{{repaetData}}"
 						    </strong>
 						</div>
 						<div class="alert alert-success" id="ok" style="display: none">

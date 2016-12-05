@@ -19,7 +19,7 @@ function ruleta(num, opt)
 }
 
 
-for (var i = 0 ; i < 50 ; i++)
+for (var i = 0 ; i < 49 ; i++)
 {
 	n1 = ruleta(50);
 	n2 = ruleta(50);
@@ -28,9 +28,9 @@ for (var i = 0 ; i < 50 ; i++)
 	_name  = name[n1] + " " + pat[n2] + " " + pat[n3];
 	_name2  = name[n2] + " " + pat[n3] + " " + pat[n2];
 	_email = name[n1] + ruleta(1000) + "@" + email[ruleta(2)];
-	movil    = ruleta(99,10) + "-" + ruleta(99,10) + "-" + ruleta(99,10) + "-" + ruleta(99,10) + "-" + ruleta(99,10);
-	phone    = ruleta(99,10) + "-" + ruleta(99,10) + "-" + ruleta(99,10) + "-" + ruleta(99,10) + "-" + ruleta(99,10);	
-	contacto = ruleta(99,10) + "-" + ruleta(99,10) + "-" + ruleta(99,10) + "-" + ruleta(99,10) + "-" + ruleta(99,10);
+	movil    = ruleta(99,10) + "-" + ruleta(99,10) + "-" + ruleta(99,10) + "-" + ruleta(99,10) + "-";
+	phone    = ruleta(99,10) + "-" + ruleta(99,10) + "-" + ruleta(99,10) + "-" + ruleta(99,10) + "-";	
+	contacto = ruleta(99,10) + "-" + ruleta(99,10) + "-" + ruleta(99,10) + "-" + ruleta(99,10) + "-";
 	pues     = puesto[ruleta(7)]; 
 	pues     = pues.split("|");
 	grp      = grupo[pues[1]];
@@ -41,7 +41,7 @@ for (var i = 0 ; i < 50 ; i++)
 	asis      = 21 - falta;
 
 	_json = {
-				"num"  : (1100 + i),
+				"num"  : (1049 + i),
 				"name" : _name,
 				"edad" : ruleta(50,20),
 				"sexo" : (aux === 0) ? 'F' : 'M',
@@ -60,16 +60,18 @@ for (var i = 0 ; i < 50 ; i++)
 				'pagadora' : pagadora[ruleta(3)],
 				'foto'     : 'empleado_' + ruleta(5) + ".png",
 				'estudio'  : estu,
-				'tel'      : phone,
-				'cel'      : movil,
-				'email'    : _email,
+				'tel'      : phone + (10+i),
+				'cel'      : movil + (10+i),
+				'email'    : (1000 + i)+"_"+_email.toLowerCase(),
 				'depto'    : _depto,
-				'emergencia' : {'n' : _name2 , 't' : contacto},
+				'emergencia' : {'n' : _name2 , 't' : contacto + ruleta(99,10)},
 				'datIngreso' : ruleta(28)+"-09-"+2016,
 				'datBaja'    : "00-00-00",
 				'status'     : (aux === 0) ? 1 : 2,
 				'asistencia' : {'f' : falta, 'asistencia' : asis},
-
+    			'banco'  : "Banco " + ruleta(4),
+    			'clave'  : "00000000000000" + (1000 + i),
+    			'bcuenta' : "000000000000" + (1000 + i)
  			};
 
 	json.push(_json);
